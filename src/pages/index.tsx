@@ -5,6 +5,8 @@ import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
 import Jobs from "../components/sections/Jobs";
 import Featured from "../components/sections/Featured";
+import Projects from "../components/sections/Projects";
+import Contact from "../components/sections/Contact";
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
@@ -13,6 +15,8 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         <About />
         <Jobs />
         <Featured />
+        <Projects />
+        <Contact />
     </Layout>
   )
 }

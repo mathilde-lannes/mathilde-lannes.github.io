@@ -25,7 +25,7 @@ const StyledText = styled.div`
     grid-template-columns: repeat(2, minmax(140px, 200px));
     grid-gap: 0 10px;
     padding: 0;
-    margin: 20px 0 0 0;
+    margin: 20px 0;
     overflow: hidden;
     list-style: none;
 
@@ -122,7 +122,7 @@ const About = () => {
         sr.reveal(revealContainer.current, srConfig());
     }, []);
 
-    const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+    const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'React Native', 'Node.js', 'Python'];
 
 
     return (
@@ -133,30 +133,15 @@ const About = () => {
                 <StyledText>
                     <div>
                         <p>
-                            Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-                            interest in web development started back in 2012 when I decided to try editing custom
-                            Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-                            about HTML &amp; CSS!
+                            Hello! My name is Mathilde and I enjoy making things for the Internet.
+                            In my free time, I am really into knitting and sewing my own clothes, but this portfolio is all about tech!
                         </p>
 
                         <p>
-                            Fast-forward to today, and I’ve had the privilege of working at{' '}
-                            <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-                            <a href="https://starry.com/">a start-up</a>,{' '}
-                            <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-                            <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-                            main focus these days is building accessible, inclusive products and digital
-                            experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-                            clients.
-                        </p>
-
-                        <p>
-                            I also recently{' '}
-                            <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                                launched a course
-                            </a>{' '}
-                            that covers everything you need to build a web app with the Spotify API using Node
-                            &amp; React.
+                            I’ve had the privilege of working at{' '}
+                            <a href="https://www.synapse-developpement.fr">a start-up specialized in NLP</a> and{' '}
+                            <a href="https://www.thalesgroup.com/fr">a huge corporation</a>. My
+                            main focus now is helping researchers at <a href="https://institutducerveau-icm.org/fr/">a neuroscience institute</a> by providing them tools to collect and analyze data.
                         </p>
 
                         <p>Here are a few technologies I’ve been working with recently:</p>

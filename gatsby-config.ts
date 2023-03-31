@@ -67,6 +67,15 @@ const config: GatsbyConfig = {
       },
       __key: "projects"
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#0a192f`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
   ]
 };
 

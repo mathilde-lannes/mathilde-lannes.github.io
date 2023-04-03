@@ -360,29 +360,6 @@ const GlobalStyle = createGlobalStyle`
     font-size: var(--fz-md);
   }
 
-  .skip-to-content {
-    ${({ theme }) => theme.mixins.button};
-    position: absolute;
-    top: auto;
-    left: -999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    z-index: -99;
-
-    &:focus,
-    &:active {
-      background-color: var(--green);
-      color: var(--navy);
-      top: 0;
-      left: 0;
-      width: auto;
-      height: auto;
-      overflow: auto;
-      z-index: 99;
-    }
-  }
-
   #logo {
     color: var(--green);
   }

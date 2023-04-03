@@ -1,7 +1,7 @@
 import React from 'react';
 import {graphql, useStaticQuery} from "gatsby";
 
-const Head = ({ location }) => {
+const Head = () => {
 
     const { site } = useStaticQuery(
         graphql`
@@ -28,12 +28,11 @@ const Head = ({ location }) => {
         title: defaultTitle,
         description: defaultDescription,
         image: `${siteUrl}${defaultImage}`,
-        url: `${siteUrl}${location.pathname}`,
+        url: `${siteUrl}`,
     };
     return (
         <>
             <title>{ seo.title }</title>
-            <html lang="en" />
 
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />

@@ -1,1 +1,0 @@
-body #preloader{display:none;height:0;left:-10%;margin-left:calc(100vw - 100%);overflow-x:hidden;position:fixed;right:-10%;top:0}body.preloader_active{height:100vh;overflow-y:hidden}body.preloader_active #preloader{align-items:center;background-color:#0a192f;bottom:0;display:flex;flex-direction:column;height:auto;justify-content:center;overflow:hidden;z-index:9999}

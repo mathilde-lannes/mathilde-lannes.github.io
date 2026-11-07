@@ -35,9 +35,14 @@ export function Experience() {
                   {job.role} · {job.company}
                 </h3>
                 <p className="mt-1 text-sm text-muted">{job.location}</p>
-                <ul className="mt-3 list-disc space-y-2 pl-4 text-sm leading-relaxed">
+                <ul className="mt-3 space-y-2 text-sm leading-relaxed">
                   {job.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
+                    <li key={highlight} className="relative pl-5">
+                      <span className="absolute left-0 text-accent" aria-hidden="true">
+                        ▹
+                      </span>
+                      {highlight}
+                    </li>
                   ))}
                 </ul>
                 {job.skills.length > 0 ? (

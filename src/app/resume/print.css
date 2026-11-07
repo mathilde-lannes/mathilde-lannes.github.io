@@ -1,0 +1,47 @@
+/* Print / PDF layout tuned to letter size like Brittany Chiang's resume.pdf */
+
+@page {
+  size: letter;
+  margin: 0.48in 0.55in 0.45in 0.55in;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff !important;
+    color: #1a1a1a !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .resume-sheet {
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  .resume-pdf {
+    font-size: 11px;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
+
+/*
+  Inline Markdown markers for the PDF text layer.
+  letter-spacing collapses their advance so titles are not indented and
+  not pulled past the left edge (negative margins were clipping glyphs).
+*/
+.resume-md-marker {
+  color: #fffffe;
+  font-size: 6px;
+  letter-spacing: -0.45em;
+  speak: never;
+  pointer-events: none;
+  user-select: none;
+}

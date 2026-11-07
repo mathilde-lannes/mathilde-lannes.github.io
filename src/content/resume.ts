@@ -7,6 +7,7 @@ export type Experience = {
   startLabel: string;
   endLabel: string;
   highlights: string[];
+  skills: string[];
 };
 
 export type SkillGroup = {
@@ -142,6 +143,7 @@ export const experience: Experience[] = [
       "Partially delegate web development while reviewing frontend code and stepping in on complex problems; continue to develop all mobile features.",
       "Shape requirements early through UX workshops, mockups, and specs, combining UX expertise and domain knowledge to deliver the right technical solutions.",
     ],
+    skills: ["React", "React Native", "TypeScript", "Expo", "Node.js"],
   },
   {
     company: "Institut du Cerveau",
@@ -156,6 +158,7 @@ export const experience: Experience[] = [
       "Managed company App Store and Play Store accounts.",
       "Trained trainees on Git and actively participated in the internal Dev Club.",
     ],
+    skills: ["React", "React Native", "Node.js", "Git", "App Store", "Play Store"],
   },
   {
     company: "Thales",
@@ -170,6 +173,7 @@ export const experience: Experience[] = [
       "Managed part of a project in a product-owner-like role.",
       "Developed a React web app with machine-learning components for chemistry.",
     ],
+    skills: ["Java", "React", "Node.js", "Kibana"],
   },
   {
     company: "Synapse",
@@ -182,6 +186,7 @@ export const experience: Experience[] = [
     highlights: [
       "Developed NLP apps with Vue and Python; co-wrote and presented a research paper at a national conference.",
     ],
+    skills: ["Vue", "Python"],
   },
   {
     company: "GeometricPLM",
@@ -195,6 +200,7 @@ export const experience: Experience[] = [
       "Developed an NLP parser with Node.js and Express, and a PDF semantic annotation app with React, Scala and GraphDB.",
       "Built a natural-language smart assistant with Ionic, Angular 4, Scala and GraphDB, and machine-learning semantic components with spaCy.",
     ],
+    skills: ["Node.js", "Express", "React", "Angular", "Ionic", "Scala"],
   },
   {
     company: "IRIT",
@@ -207,6 +213,7 @@ export const experience: Experience[] = [
     highlights: [
       "Developed an Angular 2 natural-language question/answer web app; co-wrote a research paper on NLP.",
     ],
+    skills: ["Angular"],
   },
 ];
 
@@ -238,6 +245,9 @@ export function toMarkdownResume(): string {
     );
     for (const highlight of job.highlights) {
       lines.push(`- ${highlight}`);
+    }
+    if (job.skills.length > 0) {
+      lines.push("", job.skills.join(", "));
     }
     lines.push("");
   }

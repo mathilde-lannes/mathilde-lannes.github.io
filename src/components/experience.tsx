@@ -40,6 +40,18 @@ export function Experience() {
                     <li key={highlight}>{highlight}</li>
                   ))}
                 </ul>
+                {job.skills.length > 0 ? (
+                  <ul className="mt-3 flex flex-wrap gap-2" aria-label="Skills">
+                    {job.skills.map((skill) => (
+                      <li
+                        key={skill}
+                        className="rounded-full bg-accent/10 px-3 py-1 font-mono text-xs text-accent"
+                      >
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </div>
             </div>
           </li>

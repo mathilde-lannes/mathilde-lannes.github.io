@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { aboutIntro, aboutLinks } from "@/content/site";
-import { technologies } from "@/content/resume";
+import { aboutIntro, aboutLinks, lately } from "@/content/site";
 
 export function About() {
   return (
@@ -30,16 +29,6 @@ export function About() {
             </a>{" "}
             by providing them tools to collect and analyze data.
           </p>
-          <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-2 font-mono text-xs">
-            {technologies.map((skill) => (
-              <li key={skill} className="relative pl-5">
-                <span className="absolute left-0 text-accent" aria-hidden="true">
-                  ▹
-                </span>
-                {skill}
-              </li>
-            ))}
-          </ul>
         </div>
         <div className="relative mx-auto w-[70%] max-w-[300px] min-[700px]:w-full">
           <div
@@ -54,6 +43,19 @@ export function About() {
             className="relative rounded object-cover"
           />
         </div>
+      </div>
+      <div className="mt-10">
+        <p>{lately.label}</p>
+        <ul className="mt-3 space-y-2 font-mono text-xs">
+          {lately.items.map((item) => (
+            <li key={item} className="relative pl-5">
+              <span className="absolute left-0 text-accent" aria-hidden="true">
+                ▹
+              </span>
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

@@ -1,7 +1,21 @@
-export const tagline = "I like building web & mobile apps.";
+export const tagline =
+  "I take web and mobile apps from the first sketch to the store.";
 
 export const aboutIntro =
-  "Hello! My name is Mathilde and I enjoy making things for the Internet. In my free time, I am really into knitting and sewing my own clothes, but this portfolio is all about tech!";
+  "Hello! My name is Mathilde and I enjoy making software, from concept to deployment. In my free time, I am really into knitting and sewing my own clothes, but this portfolio is all about tech!";
+
+export const lately = {
+  label: "What I’ve been up to lately:",
+  items: [
+    "Running UX workshops with researchers",
+    "Designing in Figma",
+    "Building with React and React Native",
+    "Testing with Jest, Maestro, Cypress, and more",
+    "Reviewing frontend code from great teammates",
+    "Shipping faster with Cursor",
+    "Publishing on the App Store and Play Store",
+  ],
+} as const;
 
 export const aboutLinks = [
   {

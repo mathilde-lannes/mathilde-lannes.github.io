@@ -6,7 +6,7 @@ import { person } from "@/content/resume";
 import { nav, tagline } from "@/content/site";
 
 export function Sidebar() {
-  const [activeId, setActiveId] = useState(nav[0].id);
+  const [activeId, setActiveId] = useState<string>(nav[0].id);
   const [barVisible, setBarVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuId = useId();

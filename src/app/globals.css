@@ -73,6 +73,21 @@ body {
   transition: width 200ms ease;
 }
 
+.inline-link {
+  color: var(--accent);
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 1px;
+  transition: background-size 200ms ease;
+}
+
+.inline-link:hover,
+.inline-link:focus-visible {
+  background-size: 100% 1px;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .hover-row:hover {
     background: var(--raised);
@@ -86,7 +101,8 @@ body {
 
   .hover-row,
   .mobile-bar,
-  .nav-bar {
+  .nav-bar,
+  .inline-link {
     transition: none;
   }
 }

@@ -1,8 +1,21 @@
 export const tagline = "I like building web & mobile apps.";
 
-export const about = [
-  "Hello! My name is Mathilde and I enjoy making things for the Internet. In my free time, I am really into knitting and sewing my own clothes, but this portfolio is all about tech!",
-  "I’ve had the privilege of working at a start-up specialized in NLP and a huge corporation. My main focus now is helping researchers at a neuroscience institute by providing them tools to collect and analyze data.",
+export const aboutIntro =
+  "Hello! My name is Mathilde and I enjoy making things for the Internet. In my free time, I am really into knitting and sewing my own clothes, but this portfolio is all about tech!";
+
+export const aboutLinks = [
+  {
+    href: "https://www.synapse-developpement.fr",
+    label: "a start-up specialized in NLP",
+  },
+  {
+    href: "https://www.thalesgroup.com/fr",
+    label: "a huge corporation",
+  },
+  {
+    href: "https://institutducerveau-icm.org/fr/",
+    label: "a neuroscience institute",
+  },
 ] as const;
 
 export const nav = [

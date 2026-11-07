@@ -20,7 +20,7 @@ export function Experience() {
             key={`${job.company}-${job.startDate}`}
             className="hover-row rounded px-4 py-4 transition-colors"
           >
-            <div className="grid gap-2 min-[1080px]:grid-cols-[11rem_minmax(0,1fr)] min-[1080px]:gap-4">
+            <div className="flex flex-col gap-2">
               <p className="font-mono text-xs text-muted">
                 <time dateTime={job.startDate}>{job.startLabel}</time>
                 {" — "}

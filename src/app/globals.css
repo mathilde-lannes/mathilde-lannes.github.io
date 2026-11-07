@@ -2,18 +2,81 @@
 
 :root {
   --background: #0a192f;
-  --foreground: #ccd6f6;
+  --foreground: #a8b2d1;
+  --heading: #ccd6f6;
+  --muted: #8892b0;
+  --accent: #a78bfa;
+  --deep: #020c1b;
+  --raised: #112240;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-jetbrains-mono);
+  --color-heading: var(--heading);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-deep: var(--deep);
+  --color-raised: var(--raised);
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 50;
+  transform: translateY(-150%);
+  border-radius: 0.25rem;
+  background: var(--deep);
+  padding: 0.5rem 1rem;
+  color: var(--heading);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.intro {
+  animation: fade-up 500ms ease both;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hover-row:hover {
+    background: var(--raised);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro {
+    animation: none;
+  }
+
+  .hover-row {
+    transition: none;
+  }
 }

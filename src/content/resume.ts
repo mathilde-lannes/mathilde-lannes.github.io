@@ -147,6 +147,7 @@ export const experience: Experience[] = [
       "React",
       "React Native",
       "TypeScript",
+      "Tailwind CSS",
       "Expo",
       "Python",
       "Figma",

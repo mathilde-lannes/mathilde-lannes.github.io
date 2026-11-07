@@ -17,6 +17,10 @@
 /.next/
 /out/
 
+# generated resume export
+/public/resume.pdf
+/public/resume.md
+
 # production
 /build
 

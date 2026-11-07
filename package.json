@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node --experimental-strip-types scripts/write-resume-md.mts",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "resume:pdf": "node --experimental-strip-types scripts/write-resume-md.mts && node scripts/generate-resume-pdf.mjs"
   },
   "dependencies": {
     "next": "16.4.5",
@@ -20,6 +22,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.5",
+    "pdf-lib": "^1.17.1",
+    "playwright-core": "^1.65.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   },

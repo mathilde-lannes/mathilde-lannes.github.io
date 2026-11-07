@@ -65,6 +65,14 @@ body {
   animation: fade-up 500ms ease both;
 }
 
+.mobile-bar {
+  transition: transform 200ms ease;
+}
+
+.nav-bar {
+  transition: width 200ms ease;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .hover-row:hover {
     background: var(--raised);
@@ -76,7 +84,9 @@ body {
     animation: none;
   }
 
-  .hover-row {
+  .hover-row,
+  .mobile-bar,
+  .nav-bar {
     transition: none;
   }
 }

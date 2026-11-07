@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { person, profile } from "@/content/resume";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,8 +14,26 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mathilde Lannes",
-  description: "Senior frontend engineer.",
+  metadataBase: new URL(person.website),
+  title: {
+    default: person.name,
+    template: `%s — ${person.name}`,
+  },
+  description: profile,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: person.name,
+    description: profile,
+    url: person.website,
+    siteName: person.name,
+    locale: "en_US",
+    type: "website",
+  },
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

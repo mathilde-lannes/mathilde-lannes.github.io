@@ -4,7 +4,7 @@ import { PrintResume } from "@/components/resume/print-resume";
 import "./print.css";
 
 export const metadata: Metadata = {
-  title: "Resume PDF — Mathilde Lannes",
+  title: "Resume",
   description: "Printable one-page resume for Mathilde Lannes.",
   robots: { index: true, follow: true },
 };
